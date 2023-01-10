@@ -2,9 +2,9 @@ version: "3.9"  # optional since v1.27.0
 services:
   sql:
     image: "mcr.microsoft.com/mssql/server:latest"
-    container_name: sql_server2022
+    container_name: sql_server2022_v2
     ports: # not actually needed, because the two services are on the same network.
-      - "1402:1433" 
+      - "1403:1433" 
     healthcheck:
       test: "exit 0"
     environment:
@@ -18,11 +18,11 @@ services:
         condition: service_healthy
     environment:
         DatabaseServer: "172.16.7.19"
-        DatabasePort: "1402"
+        DatabasePort: "1403"
         DatabaseUser: "SA"
         DatabasePassword: "Forh@d123"
         DatabaseName: "BooksStore"
-    container_name: web_api_application
+    container_name: web_api_application_v2
     ports:
-      - "8092:80"
+      - "8093:80"
   

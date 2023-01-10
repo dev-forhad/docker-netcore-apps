@@ -1,0 +1,4 @@
+Change docker-compose file database configuration as per your machine
+
+run below from cmd:
+docker-compose up --build
