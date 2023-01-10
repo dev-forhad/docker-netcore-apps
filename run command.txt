@@ -1,4 +1,10 @@
-Change docker-compose file database configuration as per your machine
+Change docker-compose file database configuration as per your machine like :
+DatabaseServer: "172.16.7.19"
+DatabasePort: "1403"
+DatabaseUser: "SA"
+DatabasePassword: "Forh@d123"
+DatabaseName: "BooksStore"
+
 
 run below from cmd:
 docker-compose up --build
